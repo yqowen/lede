@@ -55,9 +55,9 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone git@github.com:apollo-ng/luci-theme-darkmatter
-          git clone git@github.com:openwrt-develop/luci-theme-atmaterial.git
-          git clone git@github.com:rosywrt/luci-theme-rosy.git
+          git clone https://github.com/apollo-ng/luci-theme-darkmatter.git
+          git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
+          git clone https://github.com/rosywrt/luci-theme-rosy.git
 
 
       - name: Update feeds
