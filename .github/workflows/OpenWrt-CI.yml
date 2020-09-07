@@ -99,7 +99,7 @@ jobs:
           # 
           # 编译x64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_x86=y
+          # CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_Generic=y
           EOF
@@ -109,7 +109,7 @@ jobs:
           EOF
           # 编译UEFI固件:
           cat >> .config <<EOF
-          CONFIG_EFI_IMAGES=y
+          # CONFIG_EFI_IMAGES=y
           EOF
           # IPv6支持:
           cat >> .config <<EOF
@@ -197,6 +197,7 @@ jobs:
 
       - name: Compile firmware
         run: |
+          make distclean
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
